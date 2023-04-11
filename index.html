@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List with Firebase</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Add Firebase and FirebaseUI libraries -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+  <link rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/6.0.0/firebaseui.css" />
+  <script src="https://cdn.firebase.com/libs/firebaseui/6.0.0/firebaseui.js"></script>
+</head>
+<body>
+  <!-- Authentication container -->
+  <div class="auth-container">
+    <h1>Sign In / Sign Up</h1>
+    <div id="firebaseui-auth-container"></div>
+  </div>
+
+  <!-- To-Do list container -->
+  <div class="container" id="todo-container">
+    <h1>To-Do List</h1>
+    <form id="add-task-form">
+      <input type="text" id="task-input" placeholder="Add a task" />
+      <button type="submit">Add Task</button>
+    </form>
+    <ul id="task-list"></ul>
+    <button id="sign-out-btn">Sign Out</button>
+  </div>
+
+  <!-- Modal for viewing questions and answers -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2>Clarifying Questions and Answers</h2>
+      <div id="modal-text"></div>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
